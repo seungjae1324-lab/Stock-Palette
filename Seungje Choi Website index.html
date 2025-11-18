@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Economic Information Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Simple, clean styling (HTML file only, no external CSS/JS) -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    .wrapper {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.8rem;
+    }
+
+    header p {
+      margin: 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .news-popup {
+      border-left: 4px solid #ff9800;
+      background-color: #fff7e5;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .news-popup-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .news-list {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .news-list li {
+      margin-bottom: 0.2rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      margin-bottom: 0.7rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.3rem;
+    }
+
+    a {
+      color: #1565c0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .link-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .link-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    .link-note {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      padding: 0.6rem 0.5rem;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: left;
+    }
+
+    th {
+      background-color: #fafafa;
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+
+    .indicator-note {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Top section: title + short description + news popup -->
+    <header class="card">
+      <h1>Economic Information Dashboard</h1>
+      <p>
+        A simple, clean webpage with key economic indicators and direct links to major
+        investment analysis sites.
+      </p>
+
+      <!-- "Popup" news area (static box at the top) -->
+      <div class="news-popup">
+        <div class="news-popup-title">Financial News Headlines</div>
+        <ul class="news-list">
+          <!-- 직접 최신 뉴스로 수시로 교체하면 됨 -->
+          <li>[YYYY-MM-DD] Headline 1 goes here</li>
+          <li>[YYYY-MM-DD] Headline 2 goes here</li>
+          <li>[YYYY-MM-DD] Headline 3 goes here</li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Links to investment analysis sites -->
+    <section class="card" id="links">
+      <h2>Investment Analysis Links</h2>
+      <ul class="link-list">
+        <li>
+          <a href="https://www.wisdomwhale.com" target="_blank" rel="noopener noreferrer">
+            Wisdom Whale
+          </a>
+        </li>
+        <li>
+          <a href="https://www.stockrow.com" target="_blank" rel="noopener noreferrer">
+            Stockrow
+          </a>
+        </li>
+        <!-- 필요하면 여기 아래로 사이트 더 추가 가능 -->
+        <!--
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+            Another Analysis Site
+          </a>
+        </li>
+        -->
+      </ul>
+      <p class="link-note">
+        Click a link to open the analysis site in a new tab. Update or add more links as needed.
+      </p>
+    </section>
+
+    <!-- Key economic indicators table -->
+    <section class="card" id="indicators">
+      <h2>Key Economic Indicators</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Indicator</th>
+            <th>Latest Value</th>
+            <th>Date</th>
+            <th>Source / Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Interest Rate (Policy Rate)</td>
+            <td>-- %</td>
+            <td>YYYY-MM-DD</td>
+            <td>Update from central bank data</td>
+          </tr>
+          <tr>
+            <td>Consumer Price Index (CPI, YoY)</td>
+            <td>-- %</td>
+            <td>YYYY-MM-DD</td>
+            <td>Update from official statistics (e.g., BLS)</td>
+          </tr>
+          <tr>
+            <td>Unemployment Rate</td>
+            <td>-- %</td>
+            <td>YYYY-MM-DD</td>
+            <td>Update from labor statistics</td>
+          </tr>
+          <!-- 필요하면 지표 더 추가 -->
+          <!--
+          <tr>
+            <td>GDP Growth (QoQ)</td>
+            <td>-- %</td>
+            <td>YYYY-MM-DD</td>
+            <td>Update from national accounts</td>
+          </tr>
+          -->
+        </tbody>
+      </table>
+      <p class="indicator-note">
+        All values are updated manually. Replace the <strong>--</strong> and dates with the latest data.
+      </p>
+    </section>
+
+    <footer>
+      Built with a single static HTML file and published via GitHub Pages.  
+      You can edit this file anytime to update links, indicators, and headlines.
+    </footer>
+  </div>
+</body>
+</html>
